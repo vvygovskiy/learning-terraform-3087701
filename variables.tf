@@ -25,16 +25,18 @@ variable "environment"
     network_prefix = string
   })
 
-  defaults = {
+  default = {
     name = "dev"
     network_prefix = "10.0"
   }
 
-
-variable "asg_min_size"
+variable "asg_min_size" {
   description = "Minimum number of instances in ASG"
   default = 1
 
-variable "asg_max_size"
+}
+
+variable "asg_max_size" {
   description = "Maximal number of instances in ASG"
   default = 2
+}
